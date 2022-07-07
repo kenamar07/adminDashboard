@@ -34,24 +34,24 @@ $sql = mysqli_query($conn, "SELECT * FROM enrollment");
 							<tbody>
 								<?php while($fetchEnrollmentRecords = mysqli_fetch_array($sql)) {?>
 									<tr>
-									<th scope ="row"><?php echo $fetchEnrollmentRecords['no']; ?> </th>
-									<td><?php echo $fetchEnrollmentRecords['fullname']; ?></td>
-									<td><?php echo $fetchEnrollmentRecords['phonenumber']; ?></td>
-									<td><?php echo $fetchEnrollmentRecords['email']; ?></td>
-									<td><?php echo $fetchEnrollmentRecords['gender']; ?></td>
-									<td><?php echo $fetchEnrollmentRecords['course']; ?></td>
-									<td><?php echo $fetchEnrollmentRecords['enrolledon']; ?></td>
-									<td>
-										<a href="edit-enrollment.php?id=<?php echo $fetchEnrollmentRecords['no']?>  " class="btn btn-primary btn-sm">
-											<i class="fa fa-edit"></i>
-										</a>
-										<a href="" class="btn btn-info btn-sm">
-											<i class="fa fa-eye"></i>
-										</a>
-										<a href="" class="btn btn-danger btn-sm">
-											<i class="fa fa-trash"></i>
-										</a>
-									</td>
+										<th scope ="row"><?php echo $fetchEnrollmentRecords['no']; ?> </th>
+										<td><?php echo $fetchEnrollmentRecords['fullname']; ?></td>
+										<td><?php echo $fetchEnrollmentRecords['phonenumber']; ?></td>
+										<td><?php echo $fetchEnrollmentRecords['email']; ?></td>
+										<td><?php echo $fetchEnrollmentRecords['gender']; ?></td>
+										<td><?php echo $fetchEnrollmentRecords['course']; ?></td>
+										<td><?php echo $fetchEnrollmentRecords['enrolledon']; ?></td>
+										<td>
+											<a href="edit-enrollment.php?id=<?php echo $fetchEnrollmentRecords['no']?>  " class="btn btn-primary btn-sm">
+												<i class="fa fa-edit"></i>
+											</a>
+											<a href="" class="btn btn-info btn-sm">
+												<i class="fa fa-eye"></i>
+											</a>
+											<a href="" class="btn btn-danger btn-sm">
+												<i class="fa fa-trash"></i>
+											</a>
+										</td>
 									</tr>
 								<?php}?>
 							</tbody>
