@@ -10,6 +10,28 @@
         $gender = $fetchStudent['gender'];
         $course = $fetchStudent['course'];
     }
+
+    //updating user records
+    if(isset($_POST['úpdateEnrollment']))
+    {
+        //fetch from data
+        $fullname = $_POST['fullname'];
+        $phone = $_POST['phonenumber'];
+        $email = $_POST['email'];
+        $gender = $_POST['gender'];
+        $course = $_POST['course'];
+        //perform the sql query
+
+        $updateRecords = mysqli_query($conn, "UPDATE enrollment set fullname = '$fullname', phonenumber = '$phone', email = '$email', gender = '$gender', course = '$course' WHERE id='".$_GET['id']."'");
+
+        if($updateRecords)
+        {
+            $message = "Records updated successfully";
+        }
+        else{
+            $message = "Error occi=ured while updating user";
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,7 +50,8 @@
                             <h4>Edit student <?php echo $fullName ?><h4>
                         </div>
                         <div class="card-body">
-                <form action=enroll.php method="POST">
+                <form action="edit-enrollment.php
+                " method="POST">
                     <div class="row">
                         <div class="mb-3 col-lg-6">
                             <label for="fullname" class="form-label"><b>Full Name</b></label>
@@ -78,7 +101,8 @@
                     <br>
                     <br>
                     <div class="col-lg-6"> 
-                        <button type="submit" name="submitButton" class="btn btn-primary">submit application</button>
+                        <button type="submit" name="updateEnrollment" class="btn btn-primary">Update Records
+                        </button>
                     </div>
             </form>
                         </div>
