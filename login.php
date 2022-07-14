@@ -12,7 +12,6 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	
 	<div class="header navbar text-center text-white bg-maroon">
         <nav>
             Zalego Training | Admin Login

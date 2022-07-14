@@ -4,6 +4,6 @@ $username="root";
 $password="";
 $database="zalego";
 
-$conn=mysqli_connect($server, $username, $password, $database);
+$conn = mysqli_connect($server, $username, $password, $database);
 
 ?>
