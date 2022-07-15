@@ -62,6 +62,7 @@ $countAllFemales = mysqli_num_rows($queryEnrolledFemales);
 					</div>
 					<div class="card-footer"></div>
 				</div>
+
 				<div class="col-lg-12">
 					<div class="card-header bg-dark text-white text-center">
 						<span>Student Analysis</span>
@@ -71,6 +72,7 @@ $countAllFemales = mysqli_num_rows($queryEnrolledFemales);
 			</div>
 		</div>
 	</div>
+	
 
 	<?php require_once('includes/scripts.php') ?>
 </body>
