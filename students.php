@@ -32,9 +32,9 @@ $sql = mysqli_query($conn, "SELECT * FROM enrollment");
 								</tr>
 							</thead>
 							<tbody>
-								<?php while($fetchEnrollmentRecords = mysqli_fetch_array($sql)) {?>
+								<?php $count = 1; while($fetchEnrollmentRecords = mysqli_fetch_array($sql)) {?>
 									<tr>
-										<th scope ="row"><?php echo $fetchEnrollmentRecords['no']; ?> </th>
+										<th scope ="row"><?php echo $count; ?> </th>
 										<td><?php echo $fetchEnrollmentRecords['fullname']; ?></td>
 										<td><?php echo $fetchEnrollmentRecords['phonenumber']; ?></td>
 										<td><?php echo $fetchEnrollmentRecords['email']; ?></td>
@@ -53,7 +53,7 @@ $sql = mysqli_query($conn, "SELECT * FROM enrollment");
 											</a>
 										</td>
 									</tr>
-								<?php } ?>
+								<?php $count++; } ?>
 							</tbody>
 						</table>
 					</div>
